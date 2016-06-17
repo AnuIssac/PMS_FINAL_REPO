@@ -20,9 +20,9 @@ import javax.persistence.TemporalType;
 */
 @Entity
 @Table(name = "job_schema.criteria")
-@SecondaryTables({
+/*@SecondaryTables({
 	@SecondaryTable(name = "job_schema.company", pkJoinColumns = @PrimaryKeyJoinColumn(name = "criteria_id")),
-	 })
+	 })*/
 
 public class Criteria implements Serializable{
 
