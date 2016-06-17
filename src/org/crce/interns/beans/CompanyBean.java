@@ -46,7 +46,14 @@ public class CompanyBean {
 	private String created_by;
 	private Date modified_date;
 	private String modified_by;
+	private String year;
 
+	public String getYear() {
+		return year;
+	}
+	public void setYear(String year) {
+		this.year = year;
+	}
 	public Date getCreated_date() {
 		return created_date;
 	}

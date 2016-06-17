@@ -66,8 +66,16 @@ public class Company {
 	@Column(name = "modified_by")
 	private String modifiedBy;
 	
+	@Column(name = "year")
+	private String year;
 	
 	
+	public String getYear() {
+		return year;
+	}
+	public void setYear(String year) {
+		this.year = year;
+	}
 	public Date getCreatedDate() {
 		return createdDate;
 	}

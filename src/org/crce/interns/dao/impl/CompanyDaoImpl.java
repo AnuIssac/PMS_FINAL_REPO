@@ -46,7 +46,7 @@ public class CompanyDaoImpl implements CompanyDao{
 
 	}
 	
-	public void addCompany(String user,Company company) {
+public void addCompany(String user,Company company) {
 		
 		try{
 			
@@ -56,14 +56,15 @@ public class CompanyDaoImpl implements CompanyDao{
 			String temp = ft.format(dNow);
 			//Date parsed = ft.parse(temp);
 			System.out.println(temp);
+			String year =  Integer.toString(Calendar.getInstance().get(Calendar.YEAR)+1);
 			 
 			company.setCreatedDate(dNow);
 			company.setCreatedBy(user);
+			company.setYear(year);
 			
 			
 			
-			
-			sessionFactory.getCurrentSession().saveOrUpdate(company);
+			sessionFactory.getCurrentSession().save(company);
 			
 			}
 		catch (ConstraintViolationException e) {
